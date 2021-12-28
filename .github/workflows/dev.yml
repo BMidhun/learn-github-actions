@@ -20,3 +20,5 @@ jobs:
         run: npm run build
       - name: Deploy to vercel
         run: npm run build-vercel
+  test-app:
+    run: echo "Hello World"
