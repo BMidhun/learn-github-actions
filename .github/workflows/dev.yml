@@ -7,6 +7,8 @@ jobs:
       VERCEL_ORG_ID: ${{secrets.VERCEL_APP_ORG_ID}}
       VERCEL_PROJECT_ID: ${{secrets.VERCEL_APP_PROJECT_ID}}
       VERCEL_TOKEN: ${{secrets.VERCEL_APP_TOKEN}}
+    outputs:
+      status: ${{steps.appStatus.outputs.DEPLOY_STATUS}}
     steps:
       - name: checks out repository
         uses: actions/checkout@v2
@@ -20,9 +22,14 @@ jobs:
         run: npm run build
       - name: Deploy to vercel
         run: npm run build-vercel
+      - name: Update deploy status
+        id: appStatus
+        run: echo '::set-output name=DEPLOY_STATUS::completed'
   test-app:
     needs: build
     runs-on: ubuntu-latest
+    env:
+      DEPLOY_STATUS: ${{needs.build.outputs.status}}
     steps:
       - name: Print hello world
-        run: echo "hello world"
+        run: echo "Deploy status':' ${DEPLOY_STATUS}"
