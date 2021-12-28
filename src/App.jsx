@@ -11,6 +11,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello React.</p>
         <p>This app is deployed using vercel</p>
+        <p>This app is created by Midhun</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
