@@ -6,7 +6,7 @@ jobs:
     env:
       VERCEL_ORG_ID: ${{secrets.VERCEL_APP_ORG_ID}}
       VERCEL_PROJECT_ID: ${{secrets.VERCEL_APP_PROJECT_ID}}
-      VERCEL_TOKEN: ${{secrets.VERCEL_APP_TOKE}}
+      VERCEL_TOKEN: ${{secrets.VERCEL_APP_TOKEN}}
     steps:
       - name: checks out repository
         uses: actions/checkout@v2
