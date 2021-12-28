@@ -14,5 +14,5 @@ jobs:
         run: npm install
       - name: Build the project
         run: npm run build
-      - name: Steps completed
-        run: echo "Build completed"
+      - name: Deploy to vercel
+        run: npm run build-vercel
