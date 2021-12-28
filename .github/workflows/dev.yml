@@ -16,6 +16,6 @@ jobs:
         run: npm run build
       - name: Deploy to vercel
         env:
-          VERCEL_ORG_ID: c6hlPst5JTATIf0zzIRukG8K
-          VERCEL_PROJECT_ID: prj_y19BABx3Q6bX5i5QW35PthOQgfTv
+          VERCEL_ORG_ID: ${{secrets.VERCEL_APP_ORG_ID}}
+          VERCEL_PROJECT_ID: ${{secrets.VERCEL_APP_PROJECT_ID}}
         run: npm run build-vercel
