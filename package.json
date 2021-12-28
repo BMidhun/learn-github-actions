@@ -5,7 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "build-vercel": "vercel --confirm"
+    "build-vercel": "vercel --confirm --token thK9Fs0LLGrwFbMuepitaWMf"
   },
   "dependencies": {
     "react": "^17.0.2",
