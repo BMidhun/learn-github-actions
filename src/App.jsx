@@ -10,7 +10,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Hello React.</p>
-        <p>This is build using vercel</p>
+        <p>This app is deployed using vercel</p>
         <p>
           <button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
