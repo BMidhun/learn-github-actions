@@ -21,4 +21,7 @@ jobs:
       - name: Deploy to vercel
         run: npm run build-vercel
   test-app:
-    run: echo "Hello World"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print hello world
+        run: echo "hello world"
