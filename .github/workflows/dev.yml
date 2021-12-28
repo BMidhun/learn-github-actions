@@ -1,0 +1,15 @@
+name: dev server workflow
+on: [push]
+jobs:
+  print-hello-world:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print hello world
+        run: echo "Hello World"
+
+  print-hi-world:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Hi World"
+          echo "This is a sample message"
